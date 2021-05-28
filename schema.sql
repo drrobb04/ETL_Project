@@ -9,8 +9,11 @@ CREATE TABLE "Meter_Combo" (
 CREATE TABLE "scada_data" (
     "Well_Name" VARCHAR   NOT NULL,
     "Date" DATE   NOT NULL,
-    "Yesterday's_Gas_Production_(Mcf)" DECIMAL   NOT NULL,
-    "Meter_ID" VARCHARpk   NOT NULL
+    "Yesterdays_Gas_Production_(Mcf)" DECIMAL   NOT NULL,
+    "Meter_ID" VARCHAR  NOT NULL,
+	CONSTRAINT "pk_scada_data" PRIMARY KEY (
+        "Meter_ID"
+		)
 );
 
 CREATE TABLE "prams_data" (
